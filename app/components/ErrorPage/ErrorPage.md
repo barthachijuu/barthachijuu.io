@@ -1,0 +1,8 @@
+ErrorPage:
+
+```jsx
+  <ErrorPage>
+
+  </ErrorPage>
+
+```
