@@ -1,0 +1,9 @@
+function* {{camelCase sagaName}}() {
+
+}
+$&
+function* watch{{properCase sagaName}}() {
+  while ({{#if actionWatch}}yield take(actions.actionTypes.{{whichAction}}){{else}}true{{/if}}) {
+    yield call({{camelCase sagaName}});
+  }
+}

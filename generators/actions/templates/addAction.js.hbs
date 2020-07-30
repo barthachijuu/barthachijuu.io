@@ -1,0 +1,7 @@
+{{constantCase methodName}}: '{{#equal isActionNew 'Add an action'}}{{removeExtension whichActionFile}}{{else}}{{removeExtension whichRoute}}{{/equal}}/{{snakeCase methodName}}',
+  $&/** @action
+* * Insert a description
+* @name {{properCase methodName}}
+* @return {object} - The payload object
+*/
+export const do{{properCase methodName}} = payload => createAction(actionTypes.{{constantCase methodName}}, { payload });

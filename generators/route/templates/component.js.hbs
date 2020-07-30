@@ -1,0 +1,47 @@
+/**
+ *
+ * {{ properCase routeName }}
+ *
+ * @version 1.0.0
+ * @author {{uname}}
+ * @since {{since}}
+ */
+
+import React from 'react';
+{{#isPresent choicees 'history'}}
+import { withRouter } from 'react-router';
+{{/isPresent}}
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+{{#isPresent options 'lang'}}
+import formattedMessage from './languageModule';
+{{/isPresent}}
+import style from './style.js';
+
+const {{ properCase routeName }} = props => (
+  <>
+    <Helmet>
+      <title>{{properCase routeName}} Page</title>
+      <meta
+        name="description"
+        content="A React.js Boilerplate application"
+      />
+    </Helmet>
+    <p>Render Route</p>
+  </>
+);
+
+
+{{ properCase routeName }}.propTypes = {
+  // Add here some propTypes
+  actions: PropTypes.object,
+  router: PropTypes.object,
+};
+
+{{ properCase routeName }}.defaultProps = {
+  // Add here some default propTypes values
+  actions: {},
+  router: {},
+};
+
+export default {{#isPresent choicees 'history'}}withRouter({{/isPresent}}{{ properCase routeName }}{{#isPresent choicees 'history'}}){{/isPresent}};
