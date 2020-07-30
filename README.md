@@ -1,7 +1,7 @@
 [![Website](https://img.shields.io/website-up-down-green-red/http/barthachijuu.io.svg)](https://barthachijuu.io)
 [![dependencies Status](https://david-dm.org/barthachijuu/FeReactArk/status.svg)](https://david-dm.org/barthachijuu/FeReactArk)
 [![devDependencies Status](https://david-dm.org/barthachijuu/FeReactArk/dev-status.svg)](https://david-dm.org/barthachijuu/FeReactArk?type=dev)
-[![Build status](https://ci.appveyor.com/api/projects/status/6axur281m381tiif?svg=true)](https://ci.appveyor.com/project/barthachijuu/barthachijuu-ghitub-io)
+[![Build status](https://ci.appveyor.com/api/projects/status/saso16r3rot27j3p?svg=true)](https://ci.appveyor.com/project/barthachijuu/barthachijuu-io)
 [![codecov](https://codecov.io/gh/barthachijuu/barthachijuu.io/branch/master/graph/badge.svg)](https://codecov.io/gh/barthachijuu/barthachijuu.io)
 [![HitCount](http://hits.dwyl.com/barthachijuu/barthachijuughithubio.svg)](http://hits.dwyl.com/barthachijuu/barthachijuughithubio)
 [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/barthachijuu/frontend)

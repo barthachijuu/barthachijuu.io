@@ -9,6 +9,7 @@ branches:
   only:
     - master
     - production
+    - feature/ci
 
   # blacklist
   except:
@@ -35,12 +36,6 @@ install:
 # Install the latest stable version of Node
   - ps: Install-Product node $env:nodejs_version
   - npm install -g codecov
-  - npm install -g rimraf
-  - npm install -g jest
-  - npm install -g jest-enzyme
-  - npm install -g enzyme@3.9.0
-  - npm install -g enzyme-adapter-react-16@1.10.0
-  - npm install -g enzyme-to-json@3.3.5
 
 # Disable automatic builds
 build: 'off'
@@ -50,7 +45,7 @@ test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
-  - rimraf ./coverage && jest --coverage
+  - codecov -t $env:CODECOV_TOKEN -f
 
 # Cache node_modules for faster builds
 cache:
