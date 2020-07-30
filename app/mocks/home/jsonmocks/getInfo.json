@@ -1,0 +1,314 @@
+{
+  "work": [
+    {
+      "company": "Luna Labs",
+      "position": "Software Analyst",
+      "website": "https://https://www.lunalabs.it/",
+      "startDate": "2019-10-04",
+      "endDate": "Present",
+      "summary": "Milan, Italy",
+      "highlights": [
+        "Analysis of the technical specifications of the projects and planning of development flows.",
+        "Development of the source code and creation of the architectural structure.",
+        "Supervision and maintenance of projects carried out by other teams."
+      ]
+    },
+    {
+      "company": "Reply IrisCube",
+      "position": "Senior Software Engineer (Team Lead)",
+      "website": "https://www.reply.com/it/",
+      "startDate": "2015-06-08",
+      "endDate": "Present",
+      "summary": "Milan, Italy",
+      "highlights": [
+        "He is developing part of the architectural section of an internal Intesa Sanpaolo project.",
+        "Creation of the frontend architectural structure for Nexi's internal projects",
+        "Involved in the development and maintenance of the main products of the Nexi company with the function and support of the frontend team",
+        "Optimization of the Apache part related to the release of the frontend packages and optimization of the deployment part with Jenkins",
+        "Implementation of the new RoboAdvisor platform for Banca Profilo, for the management of financial consultancy or portfolio management.",
+        "Development of part of services relating to the Evouuta Consulting portal for Intesa SanPaolo",
+        "Development of part of the MasterPass portal, for porting within the Intesa SanPaolo portal.",
+        "Development of the application for digital payments and money transfers. Development of the Banca Profilo Tinaba platform, linked to the app and development of the Tinaba Store platform, for the management of merchants, linked to the Tinaba app."
+      ]
+    },
+    {
+      "company": "Fineco Bank",
+      "position": "Web Developer - ICT Consultant",
+      "website": "https://www.fineco.it/",
+      "startDate": "2013-12-08",
+      "endDate": "2015-05-10",
+      "summary": "Milan, Italy",
+      "highlights": [
+        "Involved in choosing new technologies to be introduced on future projects",
+        "Management of daily changes to the website (DayByDay).",
+        "optimization of internal tools used for publishing content on the website.",
+        "Creation of the new public area of ​​the website.",
+        "Optimization of part of the backend of the website and of the Logos platform used for Trading"
+      ]
+    },
+    {
+      "company": "Craon s.r.l.",
+      "position": "Software Developer",
+      "website": "http://www.craon.it/",
+      "startDate": "2019-10-04",
+      "endDate": "2013-07-01",
+      "summary": "Vimercate, Italy",
+      "highlights": [
+        "Analysis of the technical specifications of the projects and planning of development flows and related development of the code.",
+        "Development of the source code and creation of the architectural structure.",
+        "Development of an ApplicationGame to be published on Facebook for the Wave Marketing customer. Application created using the PHP language, the Frameworks jQuery and jQueryUI, the Facebook SDK and the help of Facebook's Open Graphs",
+        "Development of four templates (CSS3 / Responsive Design) for the SeatPG customer",
+        "Development of part of the front end (HTML5 / CSS3 / JavaScript / FW jQuery) for the Alpitour portal of the client Moze Studio "
+      ]
+    },
+    {
+      "company": "My Self",
+      "position": "Web Developer",
+      "website": "",
+      "startDate": "2015-05-31",
+      "endDate": "2008-12-01",
+      "summary": "Italy",
+      "highlights": [
+        "Creation and development of Web-Application and Web sites, management, SEO (Search Engine Optimization)",
+        "Restyle of graphic templates, logo creation, and other graphic works (brochures, posters, posters, etc.)",
+        "PC technical assistance , installation of internet and intranet networks ",
+        " Assembly and PC configuration "
+      ]
+    },
+    {
+      "company": "Ingenium Technology",
+      "position": "Web Developer",
+      "website": "",
+      "startDate": "2011-11-03",
+      "endDate": "2003-11-30",
+      "summary": "Monza, Italy",
+      "highlights": [
+        "Project analysis, source code development, DB creation, SEO optimization, project associated graphics development",
+        "Source code optimization, DB optimization through SQL store procedures, graphic restyle of the contents for Fastweb",
+        "Web developer at Fastweb for optimizing back end php scripts and optimizing the MySQL code. Implementation of javascript scripts with jQuery technology for the optimization of previous scripts.",
+        "Development of the mini game to sponsor the Tablet produced by Alessi. The mini game was created with the help of the Titanium Appcelerator software, which makes it possible to package web apps, for use on mobile devices"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "ANFE Palermo",
+      "area": "Certificate of higher qualification",
+      "studyType": "Certification",
+      "startDate": "2010-05-01",
+      "endDate": "2010-11-30",
+      "summary": "Palermo, Italy",
+      "courses": [
+        "User Interface Design and Development",
+        "Design Pattern",
+        "Web Technologies",
+        "Database",
+        "Labor law",
+        "Web Styling"
+      ]
+    },
+    {
+      "institution": "ITC Vincenzo Almanza",
+      "area": "Graduation in Commercial Accounting",
+      "studyType": "Graduation",
+      "startDate": "1994-09-01",
+      "endDate": "2000-07-07",
+      "summary": "Pantelleria, Italy",
+      "courses": [
+        "Commercial accounting",
+        "Physics",
+        "Chemistry and biology",
+        "Financial mathematics",
+        "Public and private law",
+        "Political Economy"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "barthachijuu.io",
+      "publisher": "barthachijuu",
+      "category": "Web",
+      "releaseDate": "2016-09-01",
+      "website": "https://github.com/barthachijuu/barthachijuu.io",
+      "summary": "barthachijuu.io is a static single-page application developed using React.js and the react architecture before created. Is a smart presentation of myself, to represent the potential of FeReactArk",
+      "image": {
+        "modal": "/images/modal/barthachijuu.png",
+        "thumb": "/images/modal/thumb/barthachijuu_thumb.png"
+      },
+      "keywords": ["Node.js", "React.js"]
+    },
+    {
+      "name": "FE React Ark",
+      "publisher": "barthachijuu",
+      "category": "Web",
+      "releaseDate": "2019-04-14",
+      "website": "https://github.com/barthachijuu/FeReactArk",
+      "summary": "A very scalable architecture, with the best new front-end technologies, all on a configurable, feature-rich and a focus on performance and best practices",
+      "image": {
+        "modal": "/images/modal/fereact.jpg",
+        "thumb": "/images/modal/thumb/fereact_thumb.jpg"
+      },
+      "keywords": ["JavaScript", "React", "Node", "Webpack"]
+    }
+  ],
+  "skills": [
+    {
+      "title": "Programming Languages",
+      "description": [
+        "Worked primarily with JavaScript, with frameworks such as Express.js,React.js, Angular and Vue.",
+        "Interested in serverless architectures and frontend aechitecture. Try to create open source product to make easy the development."
+      ],
+      "skillDetails": [
+        {
+          "name": "JavaScript",
+          "level": "90",
+          "keywords": ["programming", "expressjs", "react"]
+        },
+        {
+          "name": "CSS",
+          "level": "80",
+          "keywords": ["styling"]
+        },
+        {
+          "name": "HTML",
+          "level": "80",
+          "keywords": ["programming", "formatting"]
+        },
+        {
+          "name": "PHP",
+          "level": "50",
+          "keywords": ["programming"]
+        }
+      ]
+    },
+    {
+      "title": "Database Systems",
+      "description": ["Experienced in both SQL and NoSQL, having worked in companies making use of MongoDB and MySQL."],
+      "skillDetails": [
+        {
+          "name": "MySQL",
+          "level": "80",
+          "keywords": ["database", "sql"]
+        },
+        {
+          "name": "MongoDB",
+          "level": "50",
+          "keywords": ["database", "nosql"]
+        },
+        {
+          "name": "PostgreSQL",
+          "level": "40",
+          "keywords": ["database", "sql"]
+        },
+        {
+          "name": "OrientDB",
+          "level": "30",
+          "keywords": ["database", "nosql"]
+        }
+      ]
+    },
+    {
+      "title": "Cross skills",
+      "description": [
+        "Experienced with many framework, having worked in companies making use of React, webpack, Angular, etc...",
+        "Interested in the continuos evolution of the frontend world."
+      ],
+      "skillDetails": [
+        "Less",
+        "Sass",
+        "Git",
+        "Jquery",
+        "Ajax",
+        "API",
+        "Photoshop",
+        "Fireworks",
+        "MediaQueries",
+        "JqueryUI",
+        "SVN",
+        "Gulp",
+        "Bower",
+        "jspm",
+        "NodeJS",
+        "Yarn",
+        "React",
+        "Redux",
+        "Jenkins",
+        "Webpack",
+        "Jest",
+        "Enzyme",
+        "Unit Test",
+        "Angular",
+        "Vue"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Alberto Pahle",
+      "position": "Senior Interface Developer",
+      "company": "Fineco Bank",
+      "reference": "The experience and the wide range of knowledge has made Bartolomeo a very useful element in numerous projects carried out by us in FinecoBank."
+    },
+    {
+      "name": "Vincenzo Bonura",
+      "position": "Responsible",
+      "company": "Sicilian Tourist Service",
+      "reference": "Together with Bartolo I started experimenting in the sector on a professional level, the first PHP / MySQL works alongside HTML / CSS were a test and a remarkable experience. 10 years have passed since then, but the speed of growth of Bartolo's professionalism seems unstoppable.In addition to being excellent in the technical sector, he has always been a perfect teammate, ready to collaborate with the team to achieve the result and improve the project."
+    },
+    {
+      "name": "Federico Tremarco",
+      "position": "Revenue Management Planning & Forecasting ",
+      "company": "Alitalia s.p.a.",
+      "reference": "Excellent skills on Web development, SEO and Android applications. Bartolo's approach is certainly innovative especially with regards to the User Experience which makes this professional a point of reference in his sector. This is one of its main strengths. Like me Bartolo in many years of study and sacrifice has been able to include in his professional training all those aspects concerning information security, something that only a strong experience in the field can allow. Versatile, precise and punctual."
+    },
+    {
+      "name": "Alessio Delmonti",
+      "position": "CEO",
+      "company": "Dexlab.io.",
+      "reference": "I can recommend Bartolo as a person with great proficiency and deep expertise of solutions. Bartolo is confident in working with different technologies and has real project management skills. Achievement oriented person. Has an in-depth understanding of modern IT technologies. Passionate, loyal and experienced."
+    },
+    {
+      "name": "Serena Lambertoni",
+      "position": "Industrial Designer",
+      "company": "Bruzzo Lambertoni Design.",
+      "reference": "Bartolo Amico was my consultant during the SEO optimization phase of a web portal. He was able to explain to me clearly and in depth on which aspects it was necessary to intervene and why; made a thorough analysis of the site's HTML and identified the critical areas on which it was possible to work to improve the portal's revenue. I am fully satisfied with your advice and, if necessary, I will use your services again for other projects."
+    },
+    {
+      "name": "Marco Tornaghi",
+      "position": "Senior Consultant",
+      "company": "BIP",
+      "reference": "It was a pleasure to collaborate with Bartolo. He is an excellent web developer and knows in depth languages, methodologies and development tools. This knowledge is also supported by his passion and constant updating, also practiced outside the workplace. His strong professionalism pushes him to always reach the goals, analyze and understand to perfection the requests and to develop solutions with capacity and precision in complete autonomy."
+    },
+    {
+      "name": "Giuseppe Davì",
+      "position": "IT/eletronics professor",
+      "company": "MIUR",
+      "reference": "As a trainer I got to know Bartolo during a web-oriented programming course. His passion for programming combined with his curiosity and determination have made his exponential growth possible, which I imagine still continues. I can therefore say with absolute certainty that in the period in which I met him, he developed excellent skills and abilities in the development of PHP, JQuery, MySQL, HTML, CSS applications."
+    },
+    {
+      "name": "Filippo Abirascid",
+      "position": "Commercial Director",
+      "company": "Craon s.r.l.",
+      "reference": "Bartolo, is passionate about his work, is attentive to the result and customer satisfaction. has excellent relationship skills with the team. it is a pleasure to be able to work together."
+    },
+    {
+      "name": "Giuseppe Scopelliti",
+      "position": "Senior Web Developer",
+      "company": "Fcinque",
+      "reference": "Bartolo is a responsible and highly trained person. I have had the opportunity to collaborate closely with him and I must admit that he is a very precious person in a web developing context. He has excellent problem solving and resource management skills, especially in professional environments subjected to periods of work stress. Kind, available with colleagues, with a lot of taste, he brings something of his professional style to every project."
+    },
+    {
+      "name": "Junio Tumbarello",
+      "position": "Director",
+      "company": "Vivaitaliani.it",
+      "reference": "Bartolo is a trained and very professional person. He knows how to work for objectives and respects the deadlines in the delivery of works. He always carried out the jobs assigned to him within the editorial office on time. In his field, that is, the Web and development in different programming environments, he is certainly a professional who is very attentive to detail. Safe, friendly, available, he is predisposed to team work and to achieve goals even in stressful conditions. It is a useful resource within a work team, also for the relationship it knows how to establish with colleagues and direct superiors."
+    },
+    {
+      "name": "Salvo Tuccio",
+      "position": "Graphic Designer",
+      "company": "Fcinque",
+      "reference": "I am happy to express my appreciation for Mr. Bartolo Amico, who served at publipoint srl. Mr. Bartolo Amico has shown himself to be particularly sociable, a characteristic that makes him an employee valued by colleagues and customers. His respect for others represents one of the main strengths in his favor but also the devotion and commitment with which he tackles every project assigned to him. Excellent skills on - SEO - Php - html - css - jquery - ajax - I am sure that Mr. Bartolo Amico will be an employee capable of fully meeting your expectations."
+    }
+  ]
+}

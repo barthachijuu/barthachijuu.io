@@ -1,0 +1,8 @@
+DotLoader:
+
+```jsx
+  <DotLoader>
+
+  </DotLoader>
+
+```

@@ -1,0 +1,253 @@
+{
+  "name": "barthachijuu-io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.jsx",
+  "repository": "",
+  "author": "Bartolo Amico <bartolo.amico@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">= 10.0.0",
+    "yarn": ">= 1.19.1",
+    "npm": ">= 5.6.0"
+  },
+  "scripts": {
+    "preanalyze": "rimraf ./monitor",
+    "analyze:clean": "rimraf ./monitor",
+    "analyze": "better-npm-run analyze",
+    "analyze:prod": "better-npm-run analyze:prod",
+    "archive": "better-npm-run archive",
+    "prebuild": "yarn build:clean",
+    "build": "better-npm-run build",
+    "build:prod": "better-npm-run build:prod",
+    "build:clean": "rimraf ./build",
+    "clean:all": "yarn analyze:clean && yarn test:clean && yarn clean && yarn build:clean",
+    "clean": "rimraf dist",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "predeploy": "yarn clean",
+    "deploy": "yarn test && better-npm-run deploy",
+    "generate": "plop --plopfile generators/index.js",
+    "lint": "eslint config server app",
+    "lint-style": "stylelint '**/*.js'",
+    "lint:app": "eslint --no-ignore app --fix",
+    "prettify": "prettier --write",
+    "reinit": "node internals/clean",
+    "start": "better-npm-run start",
+    "start:tunnel": "better-npm-run start-tunnel",
+    "start:production": "yarn test && yarn build:clean && yarn build:prod && better-npm-run start-prod",
+    "prestyleguidist:build": "rimraf styleguide",
+    "styleguidist": "styleguidist server --open --verbose --config styleguide.config.js",
+    "styleguidist:build": "styleguidist build",
+    "pretest": "rimraf ./coverage && yarn lint:app",
+    "test": "better-npm-run test",
+    "test:clean": "rimraf ./coverage",
+    "test:watch": "better-npm-run test:watch",
+    "view:coverage": "node internals/cov-server"
+  },
+  "betterScripts": {
+    "analyze": {
+      "command": "rimraf monitor && node internals/analyze",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "archive": {
+      "command": "node internals/archive"
+    },
+    "analyze:prod": {
+      "command": "node internals/analyze",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "build": {
+      "command": "node internals/compile --compile --type=build",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "deploy": {
+      "command": "yarn clean && node internals/compile --compile",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "start": {
+      "command": "webpack-dashboard -- node server --colors --verbose --mode=development --watch",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "start-tunnel": {
+      "command": "webpack-dashboard -- node internals/dev-server --colors --verbose --mode=development --watch",
+      "env": {
+        "NODE_ENV": "development",
+        "ENABLE_TUNNEL": true
+      }
+    },
+    "start-prod": {
+      "command": "webpack-dashboard -- node server",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "test": {
+      "command": "jest --coverage",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    "test:watch": {
+      "command": "jest --watchAll --color",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run lint:app",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ],
+    "*.jsx": [
+      "yarn run lint:app",
+      "git add --force"
+    ]
+  },
+  "dependencies": {
+    "@babel/polyfill": "7.0.0",
+    "@loadable/component": "^5.12.0",
+    "axios": "0.18.1",
+    "axios-mock-adapter": "1.16.0",
+    "connected-react-router": "5.0.0",
+    "express": "4.16.4",
+    "immer": "6.0.5",
+    "lodash": "4.17.19",
+    "moment": "2.22.2",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "react-helmet": "^6.1.0",
+    "react-intl": "2.7.2",
+    "react-redux": "5.0.7",
+    "react-redux-form": "1.16.14",
+    "react-router-config": "5.0.0",
+    "react-router-dom": "4.3.1",
+    "redux": "4.0.5",
+    "redux-saga": "0.16.2",
+    "redux-thunk": "2.3.0",
+    "reselect": "4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.0.0",
+    "@babel/plugin-proposal-class-properties": "7.1.0",
+    "@babel/plugin-proposal-export-namespace-from": "7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "7.0.0",
+    "@babel/plugin-transform-runtime": "7.9.6",
+    "@babel/preset-env": "7.3.4",
+    "@babel/preset-react": "7.0.0",
+    "@gfx/zopfli": "1.0.11",
+    "@testing-library/react": "^10.4.7",
+    "archiver": "3.1.1",
+    "autoprefixer": "9.3.1",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "24.4.0",
+    "babel-loader": "8.0.4",
+    "babel-plugin-react-css-modules": "3.4.2",
+    "better-npm-run": "0.1.1",
+    "chalk": "^4.1.0",
+    "compression": "1.7.3",
+    "compression-webpack-plugin": "3.0.0",
+    "coveralls": "3.0.7",
+    "css-loader": "1.0.0",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.10.0",
+    "enzyme-to-json": "3.3.5",
+    "eslint": "5.7.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-config-standard-react": "7.0.2",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-loader": "2.1.1",
+    "eslint-plugin-babel": "5.2.1",
+    "eslint-plugin-html": "4.0.6",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jest": "22.17.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-react": "7.11.1",
+    "eslint-plugin-redux-saga": "1.1.3",
+    "eslint-plugin-standard": "4.0.0",
+    "file-loader": "2.0.0",
+    "friendly-errors-webpack-plugin": "1.7.0",
+    "fs-extra": "^9.0.1",
+    "git-rev-sync": "2.0.0",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "3.2.0",
+    "husky": "3.0.0",
+    "image-webpack-loader": "6.0.0",
+    "imagemin-webp-webpack-plugin": "3.3.1",
+    "img-loader": "3.0.1",
+    "ip": "1.1.5",
+    "jest": "24.4.0",
+    "jest-enzyme": "7.0.2",
+    "jss": "10.1.1",
+    "jss-plugin-nested": "^10.3.0",
+    "lint-staged": "8.0.4",
+    "mini-css-extract-plugin": "0.4.4",
+    "mutationobserver-shim": "^0.3.7",
+    "ngrok": "^3.2.7",
+    "node-sass": "4.9.4",
+    "nuka-carousel": "^4.7.0",
+    "offline-plugin": "^5.0.7",
+    "open": "7.0.0",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "plop": "2.7.0",
+    "plop-pack-fancy-comments": "0.2.1",
+    "postcss-font-magician": "2.2.1",
+    "postcss-loader": "3.0.0",
+    "prettier": "1.15.2",
+    "react-hot-loader": "4.8.0",
+    "react-jss": "^10.3.0",
+    "react-responsive-modal": "^5.0.2",
+    "react-router-hash-link": "^2.0.0",
+    "react-styleguidist": "8.0.6",
+    "readline": "^1.3.0",
+    "redux-devtools": "3.4.1",
+    "redux-devtools-extension": "2.13.8",
+    "redux-immutable-state-invariant": "2.1.0",
+    "redux-saga-test-plan": "3.7.0",
+    "redux-saga-testing": "2.0.0",
+    "sass-loader": "7.1.0",
+    "semver": "^7.3.2",
+    "shelljs": "^0.8.4",
+    "style-loader": "0.23.1",
+    "stylelint": "12.0.0",
+    "stylelint-config-recommended": "3.0.0",
+    "stylelint-config-standard": "20.0.0",
+    "terser-webpack-plugin": "2.3.5",
+    "url-loader": "1.1.2",
+    "webpack": "4.21.0",
+    "webpack-cli": "3.2.3",
+    "webpack-dashboard": "3.2.0",
+    "webpack-dev-middleware": "3.4.0",
+    "webpack-hot-middleware": "2.24.3",
+    "webpack-image-loader": "0.0.7",
+    "webpack-jarvis": "0.3.2",
+    "webpack-manifest-plugin": "2.0.4",
+    "webpack-merge": "4.1.4",
+    "yargs": "^15.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "post-commit": "git update-index -g",
+      "pre-commit": "lint-staged && yarn run lint-style"
+    }
+  }
+}

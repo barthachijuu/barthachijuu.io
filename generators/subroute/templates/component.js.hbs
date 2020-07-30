@@ -1,0 +1,34 @@
+/**
+ *
+ * {{ properCase subrouteName }}
+ *
+ * @version 1.0.0
+ * @author {{uname}}
+ * @since {{since}}
+ */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+{{#isPresent options 'history'}}
+import { withRouter } from 'react-router';
+{{/isPresent}}
+{{#isPresent options 'lang'}}
+import formattedMessage from './languageModule';
+{{/isPresent}}
+import style from './style.js';
+
+const {{ properCase subrouteName }} = props => (
+  <>
+    <p>Render SubRoute</p>
+  </>
+);
+
+
+{{ properCase subrouteName }}.propTypes = {
+  // Add here some propTypes
+};
+
+{{ properCase subrouteName }}.defaultProps = {
+  // Add here some default propTypes values
+};
+export default {{#isPresent options 'history'}}withRouter({{/isPresent}}{{ properCase subrouteName }}{{#isPresent options 'history'}}){{/isPresent}};

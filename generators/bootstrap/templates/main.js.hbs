@@ -1,0 +1,77 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Provider } from 'react-redux';
+import preset from 'jss-preset-default';
+import { JssProvider, ThemeProvider } from 'react-jss';
+import { create, SheetsRegistry } from 'jss';
+import { ConnectedRouter } from 'connected-react-router';
+import itAppStrings from 'Translations/lang-it.json';
+import LanguageProvider from 'Utility/LanguageProvider';
+import ErrorBoundary from 'Utility/ErrorBoundary';
+import history from 'Utility/history';
+import {{properCase name}}Container from './{{properCase name}}Container';
+import theme from '../styles/themes/theme';
+
+const translationMessages = {
+  it: {
+    ...itAppStrings,
+  },
+};
+
+class MainContainer extends Component {
+  static propTypes = {
+    authRoutes: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.shape({
+      path: PropTypes.string.isRequired,
+      exact: PropTypes.bool.isRequired,
+      component: PropTypes.func.isRequired,
+    }))).isRequired,
+    noauthRoutes: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.shape({
+      path: PropTypes.string.isRequired,
+      exact: PropTypes.bool.isRequired,
+      component: PropTypes.func.isRequired,
+    }))).isRequired,
+    store: PropTypes.object.isRequired,
+  };
+
+  state = {
+    logged: true,
+    language: {
+      messages: translationMessages,
+      locale: 'it',
+    },
+  };
+
+  componentDidMount() {
+
+  }
+
+  render() {
+    const jss = create(preset());
+    jss.insertionPoint = 'jss-insertion-point';
+    const sheets = new SheetsRegistry();
+    const sheet = jss.createStyleSheet();
+    sheets.add(sheet);
+    sheets.toString();
+
+    const { store } = this.props;
+    return (
+      <>
+        <ThemeProvider theme={theme}>
+          <JssProvider registry={sheets}>
+            <Provider store={store}>
+              <LanguageProvider language={this.state.language}>
+                <ErrorBoundary>
+                  <ConnectedRouter history={history}>
+                    <{{properCase name}}Container logged={this.state.logged} {...this.props} />
+                  </ConnectedRouter>
+                </ErrorBoundary>
+              </LanguageProvider>
+            </Provider>
+          </JssProvider>
+        </ThemeProvider>
+      </>
+    );
+  }
+}
+
+export default MainContainer;
