@@ -1,0 +1,56 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-standard"
+  ],
+   "ignoreFiles": [
+      "build/**/*.scss",
+      "build/**/*.js",
+      "dist/**/*.scss",
+      "dist/**/*.js"
+  ],
+  "rules": {
+    "string-quotes": "single",
+    "no-duplicate-selectors": true,
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "color-named": "never",
+    "selector-combinator-space-after": "always",
+    "selector-attribute-quotes": "always",
+    "selector-attribute-operator-space-before": "never",
+    "selector-attribute-operator-space-after": "always",
+    "selector-attribute-brackets-space-inside": "never",
+    "selector-type-no-unknown": [true, {
+      "ignoreTypes": ["/([a-zA-Z])/"]
+    }],
+    "selector-list-comma-newline-after": "always-multi-line",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-before": "never",
+    "declaration-colon-space-after": "always",
+    "number-leading-zero": "never",
+    "function-url-quotes": "always",
+    "font-family-name-quotes": "always-unless-keyword",
+    "font-family-no-missing-generic-family-keyword": [true, {
+      "ignoreFontFamilies": ["/([a-zA-Z])/"]
+    }],
+    "comment-whitespace-inside": "always",
+    "comment-empty-line-before": "always",
+    "rule-empty-line-before": "always",
+    "media-feature-name-case": "lower",
+    "media-feature-range-operator-space-before": "always",
+    "media-feature-range-operator-space-after": "always",
+    "property-no-unknown": [true, { "ignoreProperties": ["/speak/"]
+    }],
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["for", "if", "each", "include", "mixin", "extend"]
+    }],
+    "selector-no-qualifying-type": [true, {
+      "ignore": ["attribute"]
+    }],
+    "declaration-no-important": null,
+    "selector-pseudo-class-no-unknown": [true, {
+      "ignorePseudoClasses": ["global", "local"]
+    }],
+    "no-descending-specificity": null
+  }
+}
