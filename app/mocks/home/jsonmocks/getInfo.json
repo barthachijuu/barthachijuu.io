@@ -136,7 +136,11 @@
         "modal": "/images/modal/barthachijuu.png",
         "thumb": "/images/modal/thumb/barthachijuu_thumb.png"
       },
-      "keywords": ["Node.js", "React.js"]
+      "keywords": [
+        "Node.js",
+        "React.js"
+      ],
+      "isOpen": false
     },
     {
       "name": "FE React Ark",
@@ -149,7 +153,13 @@
         "modal": "/images/modal/fereact.jpg",
         "thumb": "/images/modal/thumb/fereact_thumb.jpg"
       },
-      "keywords": ["JavaScript", "React", "Node", "Webpack"]
+      "keywords": [
+        "JavaScript",
+        "React",
+        "Node",
+        "Webpack"
+      ],
+      "isOpen": false
     }
   ],
   "skills": [
@@ -163,48 +173,73 @@
         {
           "name": "JavaScript",
           "level": "90",
-          "keywords": ["programming", "expressjs", "react"]
+          "keywords": [
+            "programming",
+            "expressjs",
+            "react"
+          ]
         },
         {
           "name": "CSS",
           "level": "80",
-          "keywords": ["styling"]
+          "keywords": [
+            "styling"
+          ]
         },
         {
           "name": "HTML",
           "level": "80",
-          "keywords": ["programming", "formatting"]
+          "keywords": [
+            "programming",
+            "formatting"
+          ]
         },
         {
           "name": "PHP",
           "level": "50",
-          "keywords": ["programming"]
+          "keywords": [
+            "programming"
+          ]
         }
       ]
     },
     {
       "title": "Database Systems",
-      "description": ["Experienced in both SQL and NoSQL, having worked in companies making use of MongoDB and MySQL."],
+      "description": [
+        "Experienced in both SQL and NoSQL, having worked in companies making use of MongoDB and MySQL."
+      ],
       "skillDetails": [
         {
           "name": "MySQL",
           "level": "80",
-          "keywords": ["database", "sql"]
+          "keywords": [
+            "database",
+            "sql"
+          ]
         },
         {
           "name": "MongoDB",
           "level": "50",
-          "keywords": ["database", "nosql"]
+          "keywords": [
+            "database",
+            "nosql"
+          ]
         },
         {
           "name": "PostgreSQL",
           "level": "40",
-          "keywords": ["database", "sql"]
+          "keywords": [
+            "database",
+            "sql"
+          ]
         },
         {
           "name": "OrientDB",
           "level": "30",
-          "keywords": ["database", "nosql"]
+          "keywords": [
+            "database",
+            "nosql"
+          ]
         }
       ]
     },

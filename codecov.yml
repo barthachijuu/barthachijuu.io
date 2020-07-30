@@ -28,7 +28,7 @@
     "round": "down"
   },
   "codecov": {
-    "token": 4b45c81a-d142-494c-93ca-65588ce92e07,
+    "token": 858f1b88-2930-4c37-a9f9-102d02ee19be,
     "notify": {},
     "require_ci_to_pass": true
   }
