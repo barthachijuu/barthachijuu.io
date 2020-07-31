@@ -10,7 +10,7 @@
 
 # barthachijuu.io
 
-<div align="justify"><a href="https:\\barthachijuu.io">barthachijuu.io</a> is a static single-page application developed using the open source project
+<div align="justify"><a href="https://barthachijuu.dev" target="_blank">barthachijuu.io</a> is a static single-page application developed using the open source project
 <a href="https://github.com/barthachijuu/FeReactArk">FeReactArk</a>. It uses the Ceevee template designed by Styleshout, ported over to React.js,
 and use the mockable.io sites to use API REST to store a Curriculum Vitae in JSON format.</div>
 <div align="justify">This project is been developed, to try the performance of FeReactArk and to create a short presentation of myself. Feel free to reuse
@@ -65,7 +65,7 @@ To bundle for deployement:
 yarn deploy
 ```
 
-You can view the live site at [barthachijuu.dev](https:\\barthachijuu.dev)
+You can view the live site at [barthachijuu.dev](https://barthachijuu.dev)
 
 ## 🎁 Support: Donate
 
