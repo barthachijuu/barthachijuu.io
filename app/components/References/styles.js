@@ -17,6 +17,8 @@ const referencesStyle = createUseStyles({
     width: '100%',
     overflow: 'hidden',
     textAlign: 'left',
+    opacity: '.9',
+    boxShadow: 'inset 0 0 0 2000px rgba(43, 43, 43, .40)',
 
     '& blockquote': {
       margin: '0 0px 30px 0px',

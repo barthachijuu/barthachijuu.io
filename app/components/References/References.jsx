@@ -17,13 +17,12 @@ const References = (props) => {
   const classes = styles();
   const settings = {
     autoplay: true,
-    decorators: [],
     framePadding: '10px',
     cellSpacing: 30,
     wrapAround: true,
     withoutControls: true,
     enableKeyboardControls: false,
-    heightMode: 'current',
+    heightMode: 'max',
   };
 
   const getRefs = refs => (
