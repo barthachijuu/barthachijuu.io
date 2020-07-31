@@ -8,7 +8,7 @@ import loadable from '@loadable/component';
  * @return {object} - The response of method, with additional info
  */
 export const handlingResponse = (data) => {
-  if (data && !/ok/i.test(data.statusText)) {
+  if (data && data.status !== 200) {
     switch (data.status) {
     case 401:
       data.type = 'Unauthorized';

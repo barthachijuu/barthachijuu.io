@@ -1,3 +1,4 @@
+![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_message=up&url=https%3A%2F%2Fbarthachijuu.dev%2F)
 [![dependencies Status](https://david-dm.org/barthachijuu/FeReactArk/status.svg)](https://david-dm.org/barthachijuu/FeReactArk)
 [![devDependencies Status](https://david-dm.org/barthachijuu/FeReactArk/dev-status.svg)](https://david-dm.org/barthachijuu/FeReactArk?type=dev)
 [![Build status](https://ci.appveyor.com/api/projects/status/saso16r3rot27j3p?svg=true)](https://ci.appveyor.com/project/barthachijuu/barthachijuu-io)
@@ -64,7 +65,7 @@ To bundle for deployement:
 yarn deploy
 ```
 
-You can view the live site at [barthachijuu.io](https:\\barthachijuu.ghithub.io)
+You can view the live site at [barthachijuu.dev](https:\\barthachijuu.dev)
 
 ## 🎁 Support: Donate
 

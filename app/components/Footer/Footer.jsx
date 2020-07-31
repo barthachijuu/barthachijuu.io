@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="twelve columns">
             <ul className={classes.sociallink}>
               <li>
-                <a href="mailto:bartolo.amico@gmail.com">
+                <a href="mailto:mail@barthachijuu.dev">
                   <i className="fa fa-envelope" />
                 </a>
               </li>

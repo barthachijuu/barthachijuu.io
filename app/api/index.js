@@ -23,7 +23,7 @@ axios.interceptors.request.use(config => config, error => error);
 // Add a response interceptor
 axios.interceptors.response.use((response) => {
   // Do something with response data
-  if (ISMOCK) response.statusText = 'ok';
+  response.statusText = 'ok';
   return response;
 }, error => error);
 export {

@@ -17,7 +17,7 @@ const Social = () => {
     <>
       <ul className={classes.social}>
         <li>
-          <a href="mailto:bartolo.amico@gmail.com">
+          <a href="mailto:mail@barthachijuu.dev">
             <i className="fa fa-envelope" />
           </a>
         </li>

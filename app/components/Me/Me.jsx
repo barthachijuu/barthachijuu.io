@@ -40,8 +40,8 @@ const Me = () => {
                       (+39)320 8655003
                   </span>
                   <br />
-                  <a href="mailto:mail@barthachijuu.io">
-                    mail@barthachijuu.io
+                  <a href="mailto:mail@barthachijuu.dev">
+                    mail@barthachijuu.dev
                   </a>
                 </p>
               </div>
