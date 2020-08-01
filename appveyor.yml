@@ -9,7 +9,6 @@ branches:
   only:
     - master
     - production
-    - feature/ci
 
   # blacklist
   except:
@@ -35,7 +34,7 @@ init:
 install:
 # Install the latest stable version of Node
   - ps: Install-Product node $env:nodejs_version
-  - npm install -g codecov
+  - npm install
 
 # Disable automatic builds
 build: 'off'
@@ -45,9 +44,27 @@ test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
-  - codecov -t $env:CODECOV_TOKEN -f
+  # run test and build
+  - npm run deploy
 
 # Cache node_modules for faster builds
 cache:
  - "%LOCALAPPDATA%\\Yarn"
  - node_modules -> package.json
+
+artifacts:
+  - path: '*.zip'
+    name: barthachijuu-io
+
+deploy:
+  - provider: FTP
+    name: production
+    on:
+      branch: master
+    protocol: ftp
+    host: ftp.cluster028.hosting.ovh.net
+    username: barthag
+    password:
+      secure: W1zBAdWLOOWBGhbRmO00vQ==
+    folder: www
+    debug: true # show complete FTP log
