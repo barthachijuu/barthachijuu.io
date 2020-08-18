@@ -39,7 +39,7 @@ const Footer = () => {
               <li>
                 This site is developed in React.js by&nbsp;
                 <a
-                  href="https://barthachijuu.io"
+                  href="https://barthachijuu.dev"
                   title="Bartolomeo Amico"
                   target="_blank"
                   rel="noopener noreferrer"
