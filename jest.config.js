@@ -3,12 +3,15 @@ module.exports = {
   collectCoverageFrom: [
     'app/**/*.{js,jsx}',
     '!<rootDir>/app/**/*.test.{js,jsx}',
+    '!<rootDir>/app/**/styles.js',
+    '!<rootDir>/app/mocks/**/*.js',
     '!<rootDir>/app/**/index.js',
     '!<rootDir>/styles/**/*.{js,scss}',
     '!<rootDir>/svg/**/*.svg',
     '!<rootDir>/app/translations/**/*.json',
     '!<rootDir>/app/utils/styleguide/**/*.{js,jsx}',
     '!<rootDir>/app/index.jsx',
+    '!<rootDir>/app/styles/**/*.js',
     '!<rootDir>/app/**/*.{txt,ejs,htaccess}',
   ],
   coverageThreshold: {
@@ -43,4 +46,8 @@ module.exports = {
     '<rootDir>webpack',
   ],
   testRegex: 'tests/.*\\.test\\.js$',
+  globals: {
+    ISMOCK: false,
+  },
+  verbose: true,
 };

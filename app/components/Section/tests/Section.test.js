@@ -28,5 +28,13 @@ describe('<Section />', () => {
     it('should render self', () => {
       expect(component).toHaveLength(1);
     });
+    it('should match the snapshot', () => {
+      expect(component.html()).toMatchSnapshot();
+    });
+  });
+  describe('Check the DOM tag', () => {
+    it('should contain at least one section ', () => {
+      expect(component.find('#edu')).toHaveLength(1);
+    });
   });
 });

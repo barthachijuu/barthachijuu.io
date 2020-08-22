@@ -26,7 +26,7 @@ const References = (props) => {
   };
 
   const getRefs = refs => (
-    <div>
+    <div id={refs.name}>
       <blockquote>
         <p>{refs.reference}</p>
         <cite>
@@ -69,11 +69,12 @@ References.propTypes = {
   // Add here some propTypes
   // and set a minimal description i.e.
   /** Description of prop "projects". */
-  references: PropTypes.array.isRequired,
+  references: PropTypes.array,
 };
 
 References.defaultProps = {
   // Add here some default propTypes values
+  references: [],
 };
 
 export default References;

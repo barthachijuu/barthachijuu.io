@@ -17,7 +17,7 @@ const Education = (props) => {
   const classes = styles();
 
   const viewEdu = (entry, index, total) => (
-    <div className="row item">
+    <div className="row item" key={entry.institution}>
       <div className="twelve columns">
         <h3>{entry.institution}</h3>
         <p className={classes.info}>
@@ -60,11 +60,12 @@ Education.propTypes = {
   // Add here some propTypes
   // and set a minimal description i.e.
   /** Description of prop "edu". */
-  edu: PropTypes.array.isRequired,
+  edu: PropTypes.array,
 };
 
 Education.defaultProps = {
   // Add here some default propTypes values
+  edu: [],
 };
 
 export default Education;

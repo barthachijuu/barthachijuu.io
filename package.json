@@ -93,13 +93,13 @@
       }
     },
     "test": {
-      "command": "jest --coverage",
+      "command": "jest --coverage --updateSnapshot --silent",
       "env": {
         "NODE_ENV": "test"
       }
     },
     "test:watch": {
-      "command": "jest --watchAll --color",
+      "command": "jest --watchAll --color --coverage --updateSnapshot --silent",
       "env": {
         "NODE_ENV": "test"
       }

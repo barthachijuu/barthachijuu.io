@@ -15,9 +15,9 @@ import styles from './styles.js';
 const Projects = (props) => {
   const classes = styles();
   const getProjects = (project, index) => (
-    <div className="columns">
+    <div className="columns" key={project.name}>
       {/* eslint-disable */}
-      <div className={classes.itemwrap} onClick={() => props.openModal({ status: true, idx: index })}>
+      <div id={`project${index}`} className={classes.itemwrap} onClick={() => props.openModal({ status: true, idx: index })}>
       {/* eslint-enable */}
         <img
           src={project.image.thumb}
@@ -31,6 +31,7 @@ const Projects = (props) => {
         </div>
       </div>
       <Modal
+        id={`modal${index}`}
         open={project.isOpen}
         onClose={() => props.closeModal({ status: false, idx: index })} /* eslint-disable-line */
         center
@@ -65,6 +66,7 @@ const Projects = (props) => {
               type="button"
               className={classes.popupdismiss}
               onClick={() => props.closeModal({ status: false, idx: index })}
+              id={`dismiss${index}`}
             >
               Close
             </button>
@@ -96,15 +98,18 @@ Projects.propTypes = {
   // Add here some propTypes
   // and set a minimal description i.e.
   /** Description of prop "projects". */
-  projects: PropTypes.array.isRequired,
+  projects: PropTypes.array,
   /** Description of prop "openModal". */
-  openModal: PropTypes.func.isRequired,
+  openModal: PropTypes.func,
   /** Description of prop "closeModal". */
-  closeModal: PropTypes.func.isRequired,
+  closeModal: PropTypes.func,
 };
 
 Projects.defaultProps = {
   // Add here some default propTypes values
+  closeModal: undefined,
+  openModal: undefined,
+  projects: [],
 };
 
 export default Projects;

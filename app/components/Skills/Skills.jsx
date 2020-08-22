@@ -40,6 +40,7 @@ const Skills = (props) => {
             {skill.skillDetails.map(entry => (
               <li>
                 <span
+                  id={`${entry.name}`}
                   className={`${classes.barexpand} percentage${entry.level}`}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
@@ -73,11 +74,12 @@ Skills.propTypes = {
   // Add here some propTypes
   // and set a minimal description i.e.
   /** Description of prop "skill". */
-  skills: PropTypes.array.isRequired,
+  skills: PropTypes.array,
 };
 
 Skills.defaultProps = {
   // Add here some default propTypes values
+  skills: [],
 };
 
 export default Skills;

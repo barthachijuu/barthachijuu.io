@@ -5,12 +5,17 @@
  *
  */
 
-
+import produce from 'immer';
 import Home from '../modules/HomeReducers';
 import { actionTypes } from '../modules/HomeActions';
 
-const initialState = {
-  info: {},
+const state = {
+  info: {
+    projects: [
+      { name: '', isOpen: false },
+      { name: '', isOpen: false },
+    ],
+  },
 };
 
 describe('reducers', () => {
@@ -36,10 +41,43 @@ describe('reducers', () => {
     });
   });
   it('should handle GET_INFO_SUCCESS action', () => {
-    const mockResponse = { ...initialState };
-    expect(Home(initialState, { type: 'GET_INFO_SUCCESS', response: {} }))
-      .toEqual({
-        ...mockResponse,
-      });
+    const storeState = Home(state, {
+      type: actionTypes.GET_INFO_SUCCESS,
+      payload: { response: { data: [] } },
+    });
+    const newstate = produce(state, (draft) => {
+      draft.info = [];
+    });
+    expect(storeState).toEqual(newstate);
+  });
+  it('should handle GET_INFO_FAILURE action', () => {
+    const storeState = Home(state, {
+      type: actionTypes.GET_INFO_FAILURE,
+      payload: undefined,
+    });
+    const newstate = produce(state, (draft) => {
+      draft.info = undefined;
+    });
+    expect(storeState).toEqual(newstate);
+  });
+  it('should handle OPEN_MODAL action', () => {
+    const storeState = Home(state, {
+      type: actionTypes.OPEN_MODAL,
+      payload: { payload: { idx: 0, status: true } },
+    });
+    const newstate = produce(state, (draft, action) => {
+      draft.info.projects[action.payload.idx].isOpen = action.payload.status;
+    });
+    expect(storeState).toEqual(newstate);
+  });
+  it('should handle CLOSE_MODAL action', () => {
+    const storeState = Home(state, {
+      type: actionTypes.CLOSE_MODAL,
+      payload: { payload: { idx: 0, status: true } },
+    });
+    const newstate = produce(state, (draft, action) => {
+      draft.info.projects[action.payload.idx].isOpen = action.payload.status;
+    });
+    expect(storeState).toEqual(newstate);
   });
 });

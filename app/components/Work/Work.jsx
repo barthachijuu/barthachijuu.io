@@ -59,11 +59,12 @@ Work.propTypes = {
   // Add here some propTypes
   // and set a minimal description i.e.
   /** Description of prop "works". */
-  works: PropTypes.array.isRequired,
+  works: PropTypes.array,
 };
 
 Work.defaultProps = {
   // Add here some default propTypes values
+  works: [],
 };
 
 export default Work;

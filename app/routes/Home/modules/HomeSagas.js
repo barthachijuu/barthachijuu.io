@@ -16,7 +16,7 @@ import * as actions from './HomeActions';
 // start to edit this file
 
 
-function* retrieveInfo() {
+export function* retrieveInfo() {
   yield put(actions.getInfo.request());
   const { response, error } = yield call(api.getInfo);
   if (response) {
@@ -31,7 +31,7 @@ function* retrieveInfo() {
 
 // @generator saga:watch
 
-function* watchRetrieveInfo() {
+export function* watchRetrieveInfo() {
   while (yield take(actions.actionTypes.GET_INFO)) {
     yield call(retrieveInfo);
   }

@@ -5,39 +5,26 @@
  *
  */
 
-import sagaHelper from 'redux-saga-testing';
-import { call, put } from 'redux-saga/effects';
+import { take, call, put } from 'redux-saga/effects';
+import * as api from 'Api/home/home';
+import { retrieveInfo, watchRetrieveInfo } from '../modules/HomeSagas';
+import * as actions from '../modules/HomeActions';
 
-const api = jest.fn();
-const someAction = () => ({ type: 'SOME_ACTION', payload: 'foo' });
 
-function* mySaga() {
-  yield call(api);
-  yield put(someAction());
-}
-
-describe('When testing a very simple Saga', () => {
-  const it = sagaHelper(mySaga());
-
-  it('should have called the mock API first', (result) => {
-    // Here we test that the generator did run the "call" function, with the "api" as an argument.
-    // The api funtion is NOT called.
-    expect(result).toEqual(call(api));
-
-    // It's very important to understand that the generator ran the 'call' function,
-    // which only describes what it does, and that the API itself is never called.
-    // This is what we are testing here: (but you don't need to test that in your own tests)
-    expect(api).not.toHaveBeenCalled();
+describe('watchRetrieveInfo', () => {
+  it('should dispatch action "GET_NEWS" ', () => {
+    const generator = watchRetrieveInfo();
+    expect(generator.next().value)
+      .toEqual(take('home/get_info', retrieveInfo));
+    expect(generator.next().done).toBeTruthy();
   });
 
-  it('and then trigger an action', (result) => {
-    // We then test that on the next step some action is called
-    // Here, obviously, 'someAction' is called but it doesn't have any effect
-    // since it only returns an object describing the action
-    expect(result).toEqual(put(someAction()));
-  });
-
-  it('and then nothing', (result) => {
-    expect(result).toBeUndefined();
+  it('should dispatch action "GET_INFO_FAILURE" with result from fetch getInfo API', () => {
+    const mockResponse = {};
+    const gen = retrieveInfo();
+    gen.next();
+    expect(gen.next(true).value).toEqual(call(api.getInfo));
+    expect(gen.next(mockResponse).value).toEqual(put(actions.getInfo.failure(mockResponse)));
+    expect(gen.next().done).toBeTruthy();
   });
 });
