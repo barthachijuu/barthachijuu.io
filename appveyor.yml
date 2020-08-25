@@ -56,14 +56,9 @@ artifacts:
   - path: '*.zip'
     name: barthachijuu-io
 
-before_deploy:
-  - cmd: bin/before_deploy.sh
-
 deploy:
   - provider: FTP
     name: production
-    on:
-      branch: master
     protocol: ftp
     host: ftp.cluster028.hosting.ovh.net
     username: barthag
@@ -73,4 +68,4 @@ deploy:
     debug: true # show complete FTP log
 
 after_deploy:
-  - cmd: bin/after_deploy.sh
+  - cmd: echo "deploy done"
