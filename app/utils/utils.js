@@ -24,3 +24,22 @@ export const getDisplayDate = (from, to) => {
  * @returns {int} the random generated
  */
 export const generateRand = () => (Math.floor(Math.random() * (128000 - 1) + 1));
+
+/**  @function
+ * * Scroll into view with settimeout method
+ *
+ * @name scrollView
+ * @returns {function} the required component
+ */
+export const scrollView = () => {
+  setTimeout(() => {
+    const { hash } = window.location;
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView();
+      }
+    }
+  }, 0);
+};

@@ -6,8 +6,10 @@
  */
 import React from 'react';
 import { shallow } from 'enzyme';
+import store from 'Store/createStore';
 import Home from '../components/Home';
 import { doGetInfo } from '../modules/HomeActions';
+
 
 let baseProps;
 let render;
@@ -20,7 +22,7 @@ beforeAll(() => {
 });
 
 beforeEach(() => {
-  render = shallow(<Home {...baseProps} />);
+  render = shallow(<Home {...baseProps} store={store} />);
 });
 
 describe('<Home /> rendering', () => {

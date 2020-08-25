@@ -16,19 +16,11 @@ import Projects from 'Components/Projects';
 import References from 'Components/References';
 import Skills from 'Components/Skills';
 import Work from 'Components/Work';
+import { scrollView } from 'Utility/utils';
 
 const Section = (props) => {
   useEffect(() => {
-    setTimeout(() => {
-      const { hash } = window.location;
-      if (hash) {
-        const id = hash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView();
-        }
-      }
-    }, 0);
+    scrollView();
   });
   return (
       <>

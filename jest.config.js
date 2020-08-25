@@ -4,8 +4,10 @@ module.exports = {
     'app/**/*.{js,jsx}',
     '!<rootDir>/app/**/*.test.{js,jsx}',
     '!<rootDir>/app/**/styles.js',
+    '!<rootDir>/app/containers/*.{js,jsx}',
+    '!<rootDir>/app/**/RootComponent.jsx',
     '!<rootDir>/app/mocks/**/*.js',
-    '!<rootDir>/app/**/index.js',
+    '!<rootDir>/app/**/index.{js,jsx}',
     '!<rootDir>/styles/**/*.{js,scss}',
     '!<rootDir>/svg/**/*.svg',
     '!<rootDir>/app/translations/**/*.json',
@@ -16,10 +18,10 @@ module.exports = {
   ],
   coverageThreshold: {
     global: {
-      branches: 28,
-      functions: 28,
-      lines: 28,
-      statements: 28,
+      branches: 60,
+      functions: 75,
+      lines: 80,
+      statements: 80,
     },
   },
   moduleDirectories: ['node_modules', 'app'],
@@ -29,6 +31,7 @@ module.exports = {
     '^Mocks(.*)$': '<rootDir>app/mocks$1',
     '^Route(.*)$': '<rootDir>app/routes$1',
     '^Store(.*)$': '<rootDir>app/store$1',
+    '^Translations(.*)$': '<rootDir>app/translations$1',
     '^Utility(.*)$': '<rootDir>app/utils$1',
     '.*\\.(css|scss)$': '<rootDir>/__mocks__/SCSSStub.js',
     '\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
@@ -48,6 +51,7 @@ module.exports = {
   testRegex: 'tests/.*\\.test\\.js$',
   globals: {
     ISMOCK: false,
+    __DEV__: true,
   },
   verbose: true,
 };

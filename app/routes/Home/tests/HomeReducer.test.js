@@ -12,8 +12,8 @@ import { actionTypes } from '../modules/HomeActions';
 const state = {
   info: {
     projects: [
-      { name: '', isOpen: false },
-      { name: '', isOpen: false },
+      { name: 'pr1', isOpen: false },
+      { name: 'pr2', isOpen: false },
     ],
   },
 };
@@ -24,6 +24,7 @@ describe('reducers', () => {
       info: {},
     });
   });
+
   it('should change the modal state to open it', () => {
     expect(Home({ isOpen: true }, {
       types: actionTypes.OPEN_MODAL,
@@ -32,6 +33,7 @@ describe('reducers', () => {
       isOpen: true,
     });
   });
+
   it('should change the modal state to close it', () => {
     expect(Home({ isOpen: false }, {
       types: actionTypes.CLOSE_MODAL,
@@ -40,6 +42,7 @@ describe('reducers', () => {
       isOpen: false,
     });
   });
+
   it('should handle GET_INFO_SUCCESS action', () => {
     const storeState = Home(state, {
       type: actionTypes.GET_INFO_SUCCESS,
@@ -50,6 +53,7 @@ describe('reducers', () => {
     });
     expect(storeState).toEqual(newstate);
   });
+
   it('should handle GET_INFO_FAILURE action', () => {
     const storeState = Home(state, {
       type: actionTypes.GET_INFO_FAILURE,
@@ -60,23 +64,27 @@ describe('reducers', () => {
     });
     expect(storeState).toEqual(newstate);
   });
+
   it('should handle OPEN_MODAL action', () => {
     const storeState = Home(state, {
-      type: actionTypes.OPEN_MODAL,
-      payload: { payload: { idx: 0, status: true } },
+      type: 'home/open_modal',
+      payload: {
+        status: true,
+        idx: 0,
+      },
     });
-    const newstate = produce(state, (draft, action) => {
-      draft.info.projects[action.payload.idx].isOpen = action.payload.status;
+    const newstate = produce(state, (draft) => {
+      draft.info.projects[0].isOpen = true;
     });
     expect(storeState).toEqual(newstate);
   });
   it('should handle CLOSE_MODAL action', () => {
     const storeState = Home(state, {
-      type: actionTypes.CLOSE_MODAL,
-      payload: { payload: { idx: 0, status: true } },
+      type: 'home/close_modal',
+      payload: { status: false, idx: 0 },
     });
-    const newstate = produce(state, (draft, action) => {
-      draft.info.projects[action.payload.idx].isOpen = action.payload.status;
+    const newstate = produce(state, (draft) => {
+      draft.info.projects[0].isOpen = false;
     });
     expect(storeState).toEqual(newstate);
   });

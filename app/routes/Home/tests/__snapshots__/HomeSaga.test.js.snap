@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`get info saga should dispatch action "GET_INFO"  1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Object {
+        "request": undefined,
+      },
+      "type": "home/get_info_request",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`get info saga should dispatch action "GET_INFO"  2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`get info saga should dispatch action "GET_INFO_FAILURE" 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Object {
+        "request": undefined,
+      },
+      "type": "home/get_info_request",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`get info saga should dispatch action "GET_INFO_FAILURE" 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`get info saga should dispatch action "GET_INFO_REQUEST" 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Object {
+        "request": undefined,
+      },
+      "type": "home/get_info_request",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`get info saga should dispatch action "GET_INFO_REQUEST" 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`get info saga should dispatch action "GET_INFO_SUCCESS" 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Object {
+        "request": undefined,
+      },
+      "type": "home/get_info_request",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`get info saga should dispatch action "GET_INFO_SUCCESS" 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
