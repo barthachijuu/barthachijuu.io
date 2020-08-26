@@ -68,4 +68,4 @@ deploy:
     debug: true # show complete FTP log
 
 after_deploy:
-  - cmd: echo "deploy done"
+  - cmd: bin\after_deploy.sh
