@@ -67,5 +67,5 @@ deploy:
     folder: www
     debug: true # show complete FTP log
 
-after_deploy:
-  - cmd: bin\after_deploy.sh
+#after_deploy:
+#  - cmd: bin\after_deploy.sh
