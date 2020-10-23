@@ -126,20 +126,31 @@
   ],
   "projects": [
     {
+      "name": "circularmenu",
+      "publisher": "barthachijuu",
+      "category": "Web",
+      "releaseDate": "2020-10-04",
+      "website": "https://www.npmjs.com/package/@barthachijuu/circularmenu",
+      "summary": "A very simple circular menu, developed in VanillaJS and animated with CSS3",
+      "image": {
+        "modal": "/images/modal/npm.png",
+        "thumb": "/images/modal/thumb/npm_thumb.png"
+      },
+      "keywords": ["Vanilla JS", "CSS3", "HTML"],
+      "isOpen": false
+    },
+    {
       "name": "barthachijuu.io",
       "publisher": "barthachijuu",
       "category": "Web",
-      "releaseDate": "2016-09-01",
+      "releaseDate": "2020-07-30",
       "website": "https://github.com/barthachijuu/barthachijuu.io",
       "summary": "barthachijuu.io is a static single-page application developed using React.js and the react architecture before created. Is a smart presentation of myself, to represent the potential of FeReactArk",
       "image": {
         "modal": "/images/modal/barthachijuu.png",
         "thumb": "/images/modal/thumb/barthachijuu_thumb.png"
       },
-      "keywords": [
-        "Node.js",
-        "React.js"
-      ],
+      "keywords": ["Node.js", "React.js"],
       "isOpen": false
     },
     {
@@ -153,12 +164,7 @@
         "modal": "/images/modal/fereact.jpg",
         "thumb": "/images/modal/thumb/fereact_thumb.jpg"
       },
-      "keywords": [
-        "JavaScript",
-        "React",
-        "Node",
-        "Webpack"
-      ],
+      "keywords": ["JavaScript", "React", "Node", "Webpack"],
       "isOpen": false
     }
   ],
@@ -173,73 +179,48 @@
         {
           "name": "JavaScript",
           "level": "90",
-          "keywords": [
-            "programming",
-            "expressjs",
-            "react"
-          ]
+          "keywords": ["programming", "expressjs", "react"]
         },
         {
           "name": "CSS",
           "level": "80",
-          "keywords": [
-            "styling"
-          ]
+          "keywords": ["styling"]
         },
         {
           "name": "HTML",
           "level": "80",
-          "keywords": [
-            "programming",
-            "formatting"
-          ]
+          "keywords": ["programming", "formatting"]
         },
         {
           "name": "PHP",
           "level": "50",
-          "keywords": [
-            "programming"
-          ]
+          "keywords": ["programming"]
         }
       ]
     },
     {
       "title": "Database Systems",
-      "description": [
-        "Experienced in both SQL and NoSQL, having worked in companies making use of MongoDB and MySQL."
-      ],
+      "description": ["Experienced in both SQL and NoSQL, having worked in companies making use of MongoDB and MySQL."],
       "skillDetails": [
         {
           "name": "MySQL",
           "level": "80",
-          "keywords": [
-            "database",
-            "sql"
-          ]
+          "keywords": ["database", "sql"]
         },
         {
           "name": "MongoDB",
           "level": "50",
-          "keywords": [
-            "database",
-            "nosql"
-          ]
+          "keywords": ["database", "nosql"]
         },
         {
           "name": "PostgreSQL",
           "level": "40",
-          "keywords": [
-            "database",
-            "sql"
-          ]
+          "keywords": ["database", "sql"]
         },
         {
           "name": "OrientDB",
           "level": "30",
-          "keywords": [
-            "database",
-            "nosql"
-          ]
+          "keywords": ["database", "nosql"]
         }
       ]
     },

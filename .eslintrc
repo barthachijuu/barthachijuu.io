@@ -22,7 +22,7 @@
   "env": {
     "browser": true,
     "jest": true,
-    "es6": true,
+    "es6": true
   },
   "globals": {
     "__DEV__": false,
@@ -31,7 +31,8 @@
     "__COVERAGE__": false,
     "ENV": true,
     "ISMOCK": false,
-    "API_REST_BE": false
+    "API_REST_BE": false,
+    "URL": false
   },
   "rules": {
     "arrow-body-style": [2, "as-needed"],

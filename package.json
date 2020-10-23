@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.jsx",
-  "repository": "",
+  "repository": "https://github.com/barthachijuu/barthachijuu.io.git",
   "author": "Bartolo Amico <bartolo.amico@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "engines": {
     "node": ">= 10.0.0",
     "yarn": ">= 1.19.1",
