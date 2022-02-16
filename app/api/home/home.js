@@ -15,7 +15,7 @@ export async function getInfo(params) {
   try {
     data = await axios({
       method: 'get',
-      url: 'https://demo7300324.mockable.io/getAboutMe',
+      url: 'http://demo6568667.mockable.io/getAboutMe',
       data: { ...params },
     });
     return handlingResponse(data);

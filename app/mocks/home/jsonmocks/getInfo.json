@@ -1,11 +1,25 @@
 {
   "work": [
     {
+      "company": "Nexi Digital",
+      "position": "Senior Consultant - Frontend Team Leader",
+      "website": "https://www.nexidigital.eu/",
+      "startDate": "2022-01-10",
+      "endDate": "Present",
+      "summary": "Milan, Italy",
+      "highlights": [
+        "Analysis of the technical specifications of the projects and planning of development flows.",
+        "Development of the source code and creation of the architectural structure.",
+        "Supervision and maintenance of projects carried out by other teams.",
+        "Estimation management and planning."
+      ]
+    },
+    {
       "company": "Luna Labs",
       "position": "Software Analyst",
-      "website": "https://https://www.lunalabs.it/",
+      "website": "https://www.lunalabs.it/",
       "startDate": "2019-10-04",
-      "endDate": "Present",
+      "endDate": "2022-01-09",
       "summary": "Milan, Italy",
       "highlights": [
         "Analysis of the technical specifications of the projects and planning of development flows.",
@@ -18,7 +32,7 @@
       "position": "Senior Software Engineer (Team Lead)",
       "website": "https://www.reply.com/it/",
       "startDate": "2015-06-08",
-      "endDate": "Present",
+      "endDate": "2022-01-09",
       "summary": "Milan, Italy",
       "highlights": [
         "He is developing part of the architectural section of an internal Intesa Sanpaolo project.",
@@ -126,6 +140,20 @@
   ],
   "projects": [
     {
+      "name": "waka-profile-stats",
+      "publisher": "barthachijuu",
+      "category": "Web",
+      "releaseDate": "2022-01-10",
+      "website": "https://github.com/barthachijuu/waka-profile-stats",
+      "summary": "Wakatime metrics in your github readme profile.",
+      "image": {
+        "modal": "/images/modal/github.jpg",
+        "thumb": "/images/modal/thumb/github_thumb.jpg"
+      },
+      "keywords": ["readme", "profile-readme", "wakatime-stats"],
+      "isOpen": false
+    },
+    {
       "name": "circularmenu",
       "publisher": "barthachijuu",
       "category": "Web",
@@ -161,8 +189,8 @@
       "website": "https://github.com/barthachijuu/FeReactArk",
       "summary": "A very scalable architecture, with the best new front-end technologies, all on a configurable, feature-rich and a focus on performance and best practices",
       "image": {
-        "modal": "/images/modal/fereact.jpg",
-        "thumb": "/images/modal/thumb/fereact_thumb.jpg"
+        "modal": "/images/modal/github.jpg",
+        "thumb": "/images/modal/thumb/github_thumb.jpg"
       },
       "keywords": ["JavaScript", "React", "Node", "Webpack"],
       "isOpen": false
