@@ -58,14 +58,16 @@ artifacts:
 
 deploy:
   - provider: FTP
-    name: production
-    protocol: ftp
     host: ftp.cluster028.hosting.ovh.net
+    protocol: ftp
     username: barthag
     password:
-      secure: 7q2MFfToJc9ouGMeiEgq5Q==
-    folder: www
-    debug: true # show complete FTP log
+      secure: EgTh9fckY7UPX6dWjbeVfg==
+    folder: /www/
+    artifact: /.*\.zip/
+    active_mode: false
+    beta: true
+    debug: false
 
 #after_deploy:
 #  - cmd: bin\after_deploy.sh
